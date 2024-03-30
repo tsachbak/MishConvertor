@@ -1,0 +1,164 @@
+﻿<Window x:Class="MishConvertor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MishConvertor"
+        mc:Ignorable="d"
+        Title="MishConvertor" Height="450" Width="800">
+    <Grid>
+        <TabControl x:Name="MainTabControl" SelectionChanged="MainTabControl_SelectionChanged">
+            <TabItem Header="Convert File" FontWeight="Bold">
+                <Grid x:Name="WwlcomePage" Background="Bisque">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.05*"/>
+                        <RowDefinition Height="0.2*"/>
+                        <RowDefinition Height="0.79*"/>
+                        <RowDefinition Height="0.05*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.05*"/>
+                        <ColumnDefinition Width="0.99*"/>
+                        <ColumnDefinition Width="0.05*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="1" Grid.Column="1" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                               FontWeight="Bold">Welcome to MishConvertor</TextBlock>
+                    <Grid Grid.Row="2" Grid.Column="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Add File:" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <Button Grid.Row="0" Grid.Column="1" Content="Insert Excel file" Click="UploadExcelButton_Click" Width="120" Height="50"/>
+                        <Button Grid.Row="1" Grid.Column="1" Content="Export new file"  Click="ExportNewFile_Click" Width="120" Height="50"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+                <TabItem x:Name="ViewFile" Header="View File" FontWeight="Bold">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0.1*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Latitude" FontSize="15" VerticalAlignment="Center"
+                               FontWeight="Bold" HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Text="Longitude" FontSize="15" VerticalAlignment="Center"
+                               FontWeight="Bold" HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Row="0" Grid.Column="2" Text="ITM East" FontSize="15" VerticalAlignment="Center"
+                               FontWeight="Bold" HorizontalAlignment="Left"/>
+                    <TextBlock Grid.Row="0" Grid.Column="3" Text="ITM North" FontSize="15" VerticalAlignment="Center"
+                               FontWeight="Bold" HorizontalAlignment="Left"/>
+                    <ItemsControl Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" ItemsSource="{Binding Dots}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="{Binding Lat}" Margin="5"/>
+                                    <TextBlock Grid.Column="1" Text="{Binding Longitude}" Margin="5"/>
+                                    <TextBlock Grid.Column="2" Text="{Binding MitEast}" Margin="5"/>
+                                    <TextBlock Grid.Column="3" Text="{Binding MitNorth}" Margin="5"/>
+                                </Grid>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Convert Single Dot" FontWeight="Bold">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid x:Name="from_lat_long_to_ITM" Grid.Column="0" Background="BlanchedAlmond">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Convert Latitude-Longitude to ITM" 
+                                   VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20" Margin="20 0 0 0"/>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Latitude:" VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" FontSize="20" Margin="20 0 0 0"/>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Longitude:" VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" FontSize="20" Margin="20 0 0 0"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding LatitudeReport}" Width="160" Height="40" 
+                                 Background="White" VerticalContentAlignment="Center"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding LongitudeReport}" Width="160" Height="40" 
+                                 Background="White" VerticalContentAlignment="Center"/>
+                        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="Convert" Width="120" Height="40"
+                                Click="ConvertToITM_Click" Background="DeepSkyBlue"/>
+                        <TextBlock Grid.Row="4" Grid.Column="0" Text="ITM East:" VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" FontSize="20" Margin="20 0 0 0"/>
+                        <TextBlock Grid.Row="5" Grid.Column="0" Text="ITM North:" VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" FontSize="20" Margin="20 0 0 0"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding ITMEastReport}" Width="160" Height="40" 
+                                 Background="White" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding ITMNorthReport}" Width="160" Height="40" 
+                                 Background="White" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                    </Grid>
+                    <Grid x:Name="from_ITM_to_lat_lon" Grid.Column="1" Background="BurlyWood">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Text="Convert ITM to Latitude-Longitude" 
+                                   VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20" Margin="20 0 0 0"/>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="ITM East:" VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" FontSize="20" Margin="20 0 0 0"/>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="ITM North:" VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" FontSize="20" Margin="20 0 0 0"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding ITMEastReport2}" Width="160" Height="40" 
+                                 Background="White" VerticalContentAlignment="Center"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ITMNorthReport2}" Width="160" Height="40" 
+                                 Background="White" VerticalContentAlignment="Center"/>
+                        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Content="Convert" Width="120" Height="40"
+                                Click="ConvertToLanLon_Click" Background="DeepSkyBlue"/>
+                        <TextBlock Grid.Row="4" Grid.Column="0" Text="Latitude:" VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" FontSize="20" Margin="20 0 0 0"/>
+                        <TextBlock Grid.Row="5" Grid.Column="0" Text="Longitude:" VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" FontSize="20" Margin="20 0 0 0"/>
+                        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding LatitudeReport2}" Width="160" Height="40" 
+                                 Background="White" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                        <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding LongitudeReport2}" Width="160" Height="40" 
+                                 Background="White" VerticalContentAlignment="Center" IsReadOnly="True"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
