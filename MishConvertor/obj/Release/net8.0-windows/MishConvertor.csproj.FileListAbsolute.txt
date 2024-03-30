@@ -33,3 +33,4 @@ C:\dev\MishConvertor\MishConvertor\obj\Release\net8.0-windows\MishConvertor.pdb
 C:\dev\MishConvertor\MishConvertor\obj\Release\net8.0-windows\MishConvertor.genruntimeconfig.cache
 C:\dev\MishConvertor\MishConvertor\obj\Release\net8.0-windows\ref\MishConvertor.dll
 C:\dev\MishConvertor\MishConvertor\obj\Release\net8.0-windows\MishConvertor_Content.g.cs
+C:\dev\MishConvertor\MishConvertor\obj\Release\net8.0-windows\MishConvertor.sourcelink.json

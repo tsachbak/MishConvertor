@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MishConvertor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.1")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95bf73c9d4a1fc768f57054c7680a1e70e634637")]
 [assembly: System.Reflection.AssemblyProductAttribute("MishConvertor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MishConvertor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.1")]
