@@ -41,47 +41,49 @@
                     </Grid>
                 </Grid>
             </TabItem>
-                <TabItem x:Name="ViewFile" Header="View File" FontWeight="Bold">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="0.1*"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Row="0" Grid.Column="0" Text="Latitude" FontSize="15" VerticalAlignment="Center"
+            <TabItem x:Name="ViewFile" Header="View File" FontWeight="Bold">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.1*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="Latitude" FontSize="15" VerticalAlignment="Center"
                                FontWeight="Bold" HorizontalAlignment="Left"/>
-                    <TextBlock Grid.Row="0" Grid.Column="1" Text="Longitude" FontSize="15" VerticalAlignment="Center"
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="Longitude" FontSize="15" VerticalAlignment="Center"
                                FontWeight="Bold" HorizontalAlignment="Left"/>
-                    <TextBlock Grid.Row="0" Grid.Column="2" Text="ITM East" FontSize="15" VerticalAlignment="Center"
+                        <TextBlock Grid.Row="0" Grid.Column="2" Text="ITM East" FontSize="15" VerticalAlignment="Center"
                                FontWeight="Bold" HorizontalAlignment="Left"/>
-                    <TextBlock Grid.Row="0" Grid.Column="3" Text="ITM North" FontSize="15" VerticalAlignment="Center"
+                        <TextBlock Grid.Row="0" Grid.Column="3" Text="ITM North" FontSize="15" VerticalAlignment="Center"
                                FontWeight="Bold" HorizontalAlignment="Left"/>
-                    <ItemsControl Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" ItemsSource="{Binding Dots}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <TextBlock Grid.Column="0" Text="{Binding Lat}" Margin="5"/>
-                                    <TextBlock Grid.Column="1" Text="{Binding Longitude}" Margin="5"/>
-                                    <TextBlock Grid.Column="2" Text="{Binding MitEast}" Margin="5"/>
-                                    <TextBlock Grid.Column="3" Text="{Binding MitNorth}" Margin="5"/>
-                                </Grid>
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                </Grid>
+                        <ItemsControl Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" ItemsSource="{Binding Dots}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" Text="{Binding Lat}" Margin="5"/>
+                                        <TextBlock Grid.Column="1" Text="{Binding Longitude}" Margin="5"/>
+                                        <TextBlock Grid.Column="2" Text="{Binding MitEast}" Margin="5"/>
+                                        <TextBlock Grid.Column="3" Text="{Binding MitNorth}" Margin="5"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Grid>
+                </ScrollViewer>
             </TabItem>
             <TabItem Header="Convert Single Dot" FontWeight="Bold">
                 <Grid>
