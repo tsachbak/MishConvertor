@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\dev\\MishConvertor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66D586C3-DF8F-46D2-89DC-523B744A4FA2}|MishConvertor\\MishConvertor.csproj|c:\\dev\\mishconvertor\\mishconvertor\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{66D586C3-DF8F-46D2-89DC-523B744A4FA2}|MishConvertor\\MishConvertor.csproj|solutionrelative:mishconvertor\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{66D586C3-DF8F-46D2-89DC-523B744A4FA2}|MishConvertor\\MishConvertor.csproj|c:\\dev\\mishconvertor\\mishconvertor\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66D586C3-DF8F-46D2-89DC-523B744A4FA2}|MishConvertor\\MishConvertor.csproj|solutionrelative:mishconvertor\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66D586C3-DF8F-46D2-89DC-523B744A4FA2}|MishConvertor\\MishConvertor.csproj|c:\\dev\\mishconvertor\\mishconvertor\\singledotposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66D586C3-DF8F-46D2-89DC-523B744A4FA2}|MishConvertor\\MishConvertor.csproj|solutionrelative:mishconvertor\\singledotposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66D586C3-DF8F-46D2-89DC-523B744A4FA2}|MishConvertor\\MishConvertor.csproj|c:\\dev\\mishconvertor\\mishconvertor\\mishconvertor.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
@@ -21,6 +13,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{66D586C3-DF8F-46D2-89DC-523B744A4FA2}|MishConvertor\\MishConvertor.csproj|c:\\dev\\mishconvertor\\mishconvertor\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66D586C3-DF8F-46D2-89DC-523B744A4FA2}|MishConvertor\\MishConvertor.csproj|solutionrelative:mishconvertor\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66D586C3-DF8F-46D2-89DC-523B744A4FA2}|MishConvertor\\MishConvertor.csproj|c:\\dev\\mishconvertor\\mishconvertor\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{66D586C3-DF8F-46D2-89DC-523B744A4FA2}|MishConvertor\\MishConvertor.csproj|solutionrelative:mishconvertor\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66D586C3-DF8F-46D2-89DC-523B744A4FA2}|MishConvertor\\MishConvertor.csproj|c:\\dev\\mishconvertor\\mishconvertor\\singledotposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66D586C3-DF8F-46D2-89DC-523B744A4FA2}|MishConvertor\\MishConvertor.csproj|solutionrelative:mishconvertor\\singledotposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66D586C3-DF8F-46D2-89DC-523B744A4FA2}|MishConvertor\\MishConvertor.csproj|c:\\dev\\mishconvertor\\mishconvertor\\extenalsource\\isr84lib.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,18 +42,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MishConvertor",
               "DocumentMoniker": "C:\\dev\\MishConvertor\\MishConvertor\\MishConvertor.csproj",
               "RelativeDocumentMoniker": "MishConvertor\\MishConvertor.csproj",
               "ToolTip": "C:\\dev\\MishConvertor\\MishConvertor\\MishConvertor.csproj",
               "RelativeToolTip": "MishConvertor\\MishConvertor.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-29T06:38:46.9Z"
+              "WhenOpened": "2024-03-29T06:38:46.9Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "C:\\dev\\MishConvertor\\MishConvertor\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "MishConvertor\\AssemblyInfo.cs",
@@ -61,11 +62,12 @@
               "RelativeToolTip": "MishConvertor\\AssemblyInfo.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T20:38:34.801Z"
+              "WhenOpened": "2024-03-28T20:38:34.801Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "SingleDotPosition.cs",
               "DocumentMoniker": "C:\\dev\\MishConvertor\\MishConvertor\\SingleDotPosition.cs",
               "RelativeDocumentMoniker": "MishConvertor\\SingleDotPosition.cs",
@@ -89,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\dev\\MishConvertor\\MishConvertor\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MishConvertor\\MainWindow.xaml",
@@ -101,15 +103,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\dev\\MishConvertor\\MishConvertor\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MishConvertor\\MainWindow.xaml.cs",
               "ToolTip": "C:\\dev\\MishConvertor\\MishConvertor\\MainWindow.xaml.cs",
               "RelativeToolTip": "MishConvertor\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAA5wCkAAAAIAAAA",
+              "ViewState": "AQIAAKAAAAAAAAAAAIAlwKgAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-28T17:45:45.82Z"
+              "WhenOpened": "2024-03-28T17:45:45.82Z",
+              "EditorCaption": ""
             }
           ]
         }

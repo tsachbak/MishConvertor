@@ -33,3 +33,4 @@ C:\dev\MishConvertor\MishConvertor\bin\Debug\net8.0-windows\Microsoft.IO.Recycla
 C:\dev\MishConvertor\MishConvertor\obj\Debug\net8.0-windows\MishConvertor.csproj.AssemblyReference.cache
 C:\dev\MishConvertor\MishConvertor\obj\Debug\net8.0-windows\MishConv.5F68ACEF.Up2Date
 C:\dev\MishConvertor\MishConvertor\obj\Debug\net8.0-windows\MishConvertor_Content.g.cs
+C:\dev\MishConvertor\MishConvertor\obj\Debug\net8.0-windows\MishConvertor.sourcelink.json

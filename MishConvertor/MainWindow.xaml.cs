@@ -173,6 +173,8 @@ namespace MishConvertor
 
         #region Properties
 
+        public string AppTitle => $"MishConvertor v{System.Reflection.Assembly.GetExecutingAssembly().GetName().Version}";
+
         public ObservableCollection<SingleDotPosition> Dots
         {
             get { return m_dotsList; }
